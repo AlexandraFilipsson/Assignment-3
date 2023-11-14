@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Names</title>
+  <style>
+    .player-input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <label for="playerCount">Number of Players:</label>
+    <input type="number" id="playerCount" min="1" max="5" value="1" onchange="updatePlayerCount()">
+  </div>
+
+  <div id="playerContainer">
+    <!-- The player rows will be dynamically created here using JavaScript -->
+  </div>
+
+  <script>
+    let currentPlayerCount = 1;
+
+    // Function to create player input boxes
+    function createPlayerInput(id) {
+      const label = document.createElement('label');
+      label.innerText = `Player ${id}`;
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'layer-input';
+      input.id = `player ${id}`;
+      input.placeholder = `Enter name for Player ${id}`;
+
+      const playerDiv = document.createElement('div');
+      playerDiv.appendChild(label);
+      playerDiv.appendChild(input);
+
+      return playerDiv;
+    }
+
+    // Function to add player input boxes to the container based on current player count
+    function createPlayerRows() {
+      const playerContainer = document.getElementById('playerContainer');
+
+      // Clear existing playerContainer content
+      playerContainer.innerHTML = '';
+
+      for (let i = 1; i <= currentPlayerCount; i++) {
+        const playerRow = createPlayerInput(i);
+        playerContainer.appendChild(playerRow);
+      }
+    }
+
+    // Function to update the displayed player count and recreate the player rows
+    function updatePlayerCount() {
+      currentPlayerCount = parseInt(document.getElementById('playerCount').value, 10);
+      createPlayerRows();
+    }
+
+    // Call the function initially to create the player rows with default player count
+    createPlayerRows();
+  </script>
+
+</body>
+
+</html>
