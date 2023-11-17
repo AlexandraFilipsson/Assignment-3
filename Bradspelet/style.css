@@ -1,18 +1,12 @@
-:root {
-  --text: #c0acdf;
-  --bg: rgb(99, 152, 149);
-  --btn-bg: #f171c8;
-}
-
 h4 {
   color: var(--text);
   background-color: var(--bg);
 }
 
 :root {
-  --text: #6f7710;
-  --bg: rgb(99, 152, 149);
-  --btn-bg: #272d0e;
+  --text: #dbdfac;
+  --bg: #1e5c39;
+  --btn-bg: #d7f171;
 }
 
 * {
@@ -25,12 +19,15 @@ body {
   color: var(--text);
   background-color: var(--bg);
   font-family: 'Nerko One', inherit;
+
 }
 
 h1 {
   font-size: 90px;
   margin-bottom: 0;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -69,6 +66,7 @@ h1 {
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
+
 }
 
 label {
@@ -99,6 +97,23 @@ input[type=text] {
   text-align: center;
 }
 
+li {
+  margin-bottom: 2vh;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 20px;
+  color: var(--bg);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 .player {
   font-size: 20px;
   font-weight: bold;
@@ -106,7 +121,25 @@ input[type=text] {
 
 .formName {
   display: grid;
-
   align-items: center;
   justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  font-size: 15px;
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 80px;
+  color: var(--bg);
+  cursor: pointer;
+  text-transform: uppercase;
+  display: grid;
+  align-items: flex-start;
+  justify-content: flex-start;
+
 }
