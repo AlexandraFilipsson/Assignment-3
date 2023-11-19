@@ -56,13 +56,13 @@ const boxClicked = (e) => {
       return;
     }
   } else if (spaces[id] && selectedPiece === null) {
-    // If the box is already occupied, and no piece is selected, allow selecting it
+
     selectedPiece = spaces[id];
     spaces[id] = null;
     e.target.innerText = '';
     remainingPieces[currentPlayer]++;
   } else if (!spaces[id] && selectedPiece !== null && remainingPieces[currentPlayer] > 0) {
-    // If the box is unoccupied, and a piece is selected, allow placing the selected piece
+
     spaces[id] = selectedPiece;
     e.target.innerText = selectedPiece;
     selectedPiece = null;
@@ -111,3 +111,5 @@ const restart = () => {
 restartButton.addEventListener('click', restart);
 restart();
 drawBoard();
+
+

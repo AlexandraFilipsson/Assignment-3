@@ -1,7 +1,7 @@
 :root {
-  --text: #c0acdf;
-  --bg: rgb(99, 152, 149);
-  --btn-bg: #f171c8;
+  --text: #463461;
+  --bg: rgb(51, 126, 122);
+  --btn-bg: #996c8b;
 }
 
 h4 {
@@ -12,7 +12,7 @@ h4 {
 :root {
   --text: #6f7710;
   --bg: rgb(99, 152, 149);
-  --btn-bg: #272d0e;
+  --btn-bg: rgb(97, 111, 41);
 }
 
 * {
@@ -87,12 +87,12 @@ input[type=text] {
 }
 
 .submit {
-  padding: 10px 20px;
+  padding: 15px 15px;
   background-color: var(--btn-bg);
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   color: var(--bg);
-  font-size: 20px;
+  font-size: px;
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
@@ -100,7 +100,7 @@ input[type=text] {
 }
 
 .player {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 

@@ -16,6 +16,7 @@ h4 {
 }
 
 body {
+
   color: var(--text);
   background-color: var(--bg);
   font-family: 'Nerko One', inherit;
@@ -23,7 +24,7 @@ body {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 80px;
   margin-bottom: 0;
   text-transform: uppercase;
   display: flex;
@@ -131,7 +132,7 @@ nav {
 }
 
 a {
-  font-size: 15px;
+  font-size: 10px;
   background-color: var(--btn-bg);
   border: none;
   border-radius: 80px;
