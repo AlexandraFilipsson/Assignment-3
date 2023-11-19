@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../Documents/Visual code/Bradspelet"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "Bradspelet"
+	}
+}
