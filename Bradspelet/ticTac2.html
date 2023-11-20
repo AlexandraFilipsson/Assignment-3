@@ -18,25 +18,29 @@
   <div class="container">
     <h1 id="heading">Tic Tac Toe</h1>
 
+    <form class="formName">
+      <h2>Show players</h2><br>
 
-    <script>
+    </form>
 
-
-      function startGame() {
-
-        const playerXName = document.getElementById('playerXName').value;
-        const playerOName = document.getElementById('playerOName').value;
+  </div>
 
 
-        localStorage.setItem('playerXName', playerXName);
-        localStorage.setItem('playerOName', playerOName);
+  <script>
 
-        alert('Player X: ' + playerXName + '\nPlayer 0: ' + playerOName);
+    function startGame() {
 
-        window.location.href = 'tictac.html';
-      }
+      const playerXName = document.getElementById('playerXName').value;
+      const playerOName = document.getElementById('playerOName').value;
 
-    </script>
+
+      localStorage.setItem('playerXName', playerXName);
+      localStorage.setItem('playerOName', playerOName);
+
+      alert('Player X: ' + playerXName + '\nPlayer 0: ' + playerOName);
+
+      window.location.href = 'register.html';
+    }
+
+  </script>
 </body>
-
-</html>
