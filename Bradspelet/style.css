@@ -5,8 +5,8 @@ h4 {
 
 :root {
   --text: #dbdfac;
-  --bg: #1e5c39;
-  --btn-bg: #d7f171;
+  --bg: #54896b;
+  --btn-bg: #bcc988;
 }
 
 * {
@@ -44,8 +44,8 @@ h1 {
   width: 60vw;
   display: flex;
   flex-wrap: wrap;
-  font-size: 100px;
-  margin-top: 40px;
+  font-size: 110px;
+  margin-top: 60px;
 }
 
 .box {
