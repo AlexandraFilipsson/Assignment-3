@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<!DOCTYPE html>
-<html lang="en">
-
-<a href="startPage.html" class="submit">Return to Start Page</a>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="style.css">
 
   <title>Tic Tac Toe</title>
 
-  <link rel="stylesheet" href="./ticTac.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-  <script src="./ticTac.js" defer></script>
+  <head>
+
+  <body>
+    <link rel="stylesheet" href="./ticTac.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="./ticTac.js" defer></script>
 </head>
 
 <body>
@@ -27,24 +24,52 @@
 
 
 
+
     <h1 id="heading">Play</h1>
     <h2 id="strategy"></h2>
     <button id="restart">Restart</button>
 
-    <div id="board">
-      <div class="box" id="0"></div>
-      <div class="box" id="1"></div>
-      <div class="box" id="2"></div>
-      <div class="box" id="3"></div>
-      <div class="box" id="4"></div>
-      <div class="box" id="5"></div>
-      <div class="box" id="6"></div>
-      <div class="box" id="7"></div>
-      <div class="box" id="8"></div>
+
+    <form action="ticTac.html">
+      <div id="playerNames">
+        <span id="playerXName"></span> vs <span id="playerOName"></span>
+        <script>
+
+          const playerXName = localStorage.getItem('playerXName') || 'Player X';
+          const playerOName = localStorage.getItem('playerOName') || 'Player O';
+          const winningCombination = localStorage.getItem('winningCombination') || '';
+          const winningPlayer = localStorage.getItem('winningPlayer') || '';
+
+          document.getElementById('playerXName').textContent = 'Player X:' + playerXName;
+          document.getElementById('playerOName').textContent = 'Player O:' + playerOName;
+          document.getElementById('strategy').textContent = 'Winning Combination: ' + winningCombination + ' | Winning Player: ' + (winningPlayer === tick_x ? playerXName : playerOName);
+        </script>
+
+      </div>
+
+
+    </form>
+
+
+    <div>
+      <div id="board">
+        <div class="box" id="0"></div>
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+      </div>
     </div>
 
+    <section>
+      <a href="startPage.html">Start page</a>
+    </section>
+    <script src="ticTac.js"></script>
   </div>
-
 </body>
 
 </html>
