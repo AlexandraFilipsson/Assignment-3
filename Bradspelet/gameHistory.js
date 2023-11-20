@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const matchHistoryData = JSON.parse(localStorage.getItem('matchHistoryData')) || [];
 
   matchHistoryData.forEach((match) => {
+
     const newRow = document.createElement('tr');
     const winnerCell = document.createElement('td');
     const opponentCell = document.createElement('td');
@@ -24,3 +25,4 @@ document.addEventListener('DOMContentLoaded', function () {
     matchHistoryBody.appendChild(newRow);
   });
 });
+

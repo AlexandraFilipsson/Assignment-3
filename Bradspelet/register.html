@@ -58,3 +58,33 @@
 </body>
 
 </html>
+
+<br>
+<a href="tictac.html" style="width: 25%;"><button onclick="startGame()" class="submit">Show Players & start the
+    game</button></a>
+
+
+<script>
+
+
+
+  function startGame() {
+
+    const playerXName = document.getElementById('playerXName').value;
+    const playerOName = document.getElementById('playerOName').value;
+
+
+    localStorage.setItem('playerXName', playerXName);
+    localStorage.setItem('playerOName', playerOName);
+
+    alert('Player X: ' + playerXName + '\nPlayer O: ' + playerOName);
+
+    window.location.href = 'register.html';
+  }
+
+</script>
+
+</div>
+</body>
+
+</html>
