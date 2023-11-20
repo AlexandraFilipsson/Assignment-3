@@ -25,4 +25,3 @@ document.addEventListener('DOMContentLoaded', function () {
     matchHistoryBody.appendChild(newRow);
   });
 });
-
