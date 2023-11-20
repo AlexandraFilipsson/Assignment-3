@@ -22,12 +22,8 @@
 
     <br>
 
-
     <label for="playerOName">Player O:</label>
     <input type="text" style="width: 10%;" id="playerOName" placeholder="Enter name">
-
-
-    </select>
 
     <br>
     <a href="tictac.html" style="width: 25%;"><button onclick="startGame()" class="submit">Show Players & start the
@@ -35,17 +31,13 @@
 
 
     <script>
-
-
-
       function startGame() {
 
         const playerXName = document.getElementById('playerXName').value;
         const playerOName = document.getElementById('playerOName').value;
 
-
-        localStorage.setItem('playerXName', playerXName);
-        localStorage.setItem('playerOName', playerOName);
+        localStorage.setItem('playerXName', playerXName.toLowerCase());
+        localStorage.setItem('playerOName', playerOName.toLowerCase());
 
         alert('Player X: ' + playerXName + '\nPlayer O: ' + playerOName);
 
@@ -55,36 +47,6 @@
     </script>
 
   </div>
-</body>
-
-</html>
-
-<br>
-<a href="tictac.html" style="width: 25%;"><button onclick="startGame()" class="submit">Show Players & start the
-    game</button></a>
-
-
-<script>
-
-
-
-  function startGame() {
-
-    const playerXName = document.getElementById('playerXName').value;
-    const playerOName = document.getElementById('playerOName').value;
-
-
-    localStorage.setItem('playerXName', playerXName);
-    localStorage.setItem('playerOName', playerOName);
-
-    alert('Player X: ' + playerXName + '\nPlayer O: ' + playerOName);
-
-    window.location.href = 'register.html';
-  }
-
-</script>
-
-</div>
 </body>
 
 </html>

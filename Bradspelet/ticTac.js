@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const MAX_PIECES_PER_PLAYER = 3;
 
-
-  // Retrieve match history data from local storage
   let matchHistoryData = JSON.parse(localStorage.getItem('matchHistoryData')) || [];
 
   const drawBoard = () => {
@@ -85,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (spaces[a] === currentPlayer && spaces[b] === currentPlayer && spaces[c] === currentPlayer) {
         const winningPlayerName = getPlayerName(currentPlayer);
 
-        // Store match data in local storage
+
         const matchData = {
           winner: getPlayerName(currentPlayer),
           opponent: getPlayerName(currentPlayer === tick_x ? tick_circle : tick_x),
@@ -96,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         matchHistoryData.push(matchData);
         localStorage.setItem('matchHistoryData', JSON.stringify(matchHistoryData));
 
-        // Append a new row to the match history table
+
         const newRow = document.createElement('tr');
         const winnerCell = document.createElement('td');
         const opponentCell = document.createElement('td');
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   const getPlayerName = (player) => {
-    return player === tick_x ? localStorage.getItem('playerXName') : localStorage.getItem('player0Name');
+    return player === tick_x ? localStorage.getItem('playerXName') : localStorage.getItem('playerOName');
   };
 
   const restart = () => {
