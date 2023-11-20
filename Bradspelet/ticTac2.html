@@ -18,42 +18,25 @@
   <div class="container">
     <h1 id="heading">Tic Tac Toe</h1>
 
-    <form class="formName">
-      <h2>Who will play? Add players name</h2><br>
-      <label class="player" for="player1">Player X</label>
-      <input type="text" id="player1" name="player1" value="">
 
-      <label class="player" for="player2">Player 0</label>
-      <input type="text" id="player2" name="player2" value=""><br><br>
-      <input class="submit" type="submit" value="Submit Names"><br>
-
-      <a href="ticTac.html" style="width: 30%;"><button onclick="startGame()" class="submit">Show Players</button></a>
-
-    </form>
-
-  </div>
+    <script>
 
 
+      function startGame() {
 
-  <script>
-
-
-
-    function startGame() {
-
-      const playerXName = document.getElementById('playerXName').value;
-      const playerOName = document.getElementById('playerOName').value;
+        const playerXName = document.getElementById('playerXName').value;
+        const playerOName = document.getElementById('playerOName').value;
 
 
-      localStorage.setItem('playerXName', playerXName);
-      localStorage.setItem('playerOName', playerOName);
+        localStorage.setItem('playerXName', playerXName);
+        localStorage.setItem('playerOName', playerOName);
 
-      alert('Player X: ' + playerXName + '\nPlayer 0: ' + playerOName);
+        alert('Player X: ' + playerXName + '\nPlayer 0: ' + playerOName);
 
-      window.location.href = 'tictac.html';
-    }
+        window.location.href = 'tictac.html';
+      }
 
-  </script>
+    </script>
 </body>
 
 </html>
